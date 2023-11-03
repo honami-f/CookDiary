@@ -34,6 +34,7 @@ li {
   text-decoration: none;
   margin-right: 3vw;
   color: #ffb300;
+  font-weight: bold;  
 }
 
 .logout {
