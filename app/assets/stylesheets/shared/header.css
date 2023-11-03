@@ -33,22 +33,29 @@ li {
 .user-name {
   text-decoration: none;
   margin-right: 3vw;
-  color: #333333;
+  color: #ffb300;
+  font-weight: bold;  
 }
 
 .logout {
   text-decoration: none;
-  color: #333333;
+  color: #ffb300;
+  border: 1px solid #ffb300;
+  padding: 10px;
 }
 
 .login {
   text-decoration: none;
   margin-right: 3vw;
-  color: #333333;
+  color: #ffb300;
+  border: 1px solid #ffb300;
+  padding: 10px;
 }
 
 .sign-up {
   text-decoration: none;
-  color: #333333;
+  color: #ffb300;
+  border: 1px solid #ffb300;
+  padding: 10px;
 }
 
