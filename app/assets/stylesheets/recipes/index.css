@@ -1,7 +1,7 @@
 /* 画面上部の「今日の献立」帯部分 */
 .title-contents {
   width: 100vw;
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('cook-top.jpeg');
+  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),url('cook-top.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
