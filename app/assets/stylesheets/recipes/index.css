@@ -1,7 +1,7 @@
 /* 画面上部の「今日の献立」帯部分 */
 .title-contents {
   width: 100vw;
-  background-image: url('cook-top.jpeg');
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('cook-top.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -10,16 +10,19 @@
   align-items: flex-start;
   justify-content: center;
   padding: 5vh 10vw;
-  color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(250, 104, 0, 0.9);
 }
 
 .service-title {
-  font-size: 8vh;
+  font-size: 6.5vh;
+  margin: 45px auto;
 }
 
 .service-explain {
   font-size: 4vh;
+  margin: 20px auto;
+
 }
 /* //画面上部の「今日の献立」帯部分 */
 
@@ -29,7 +32,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10vh 0;
+  padding: 1vh 0;
 }
 
 .recipe-lists {

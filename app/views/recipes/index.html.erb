@@ -4,10 +4,10 @@
   <%# 画面上部の「今日の献立」帯部分 %>
   <div class='title-contents'>
     <h2 class='service-title'>
-      今日の献立何にする？
+      今日の献立、何にする？
     </h2>
     <p class='service-explain'>
-      そんなあなたをお助けします
+      迷っているあなたをお助けします
     </p>
   </div>
   <%# /画面上部の「今日の献立」帯部分 %>
@@ -15,20 +15,7 @@
   <%# レシピ一覧 %>
   <div class='recipe-contents'>
     <h2 class='title'>新着レシピ</h2>
-    <ul class='recipe-lists'>
-      <li class='list'>
-        <%= image_tag "recipe.png", class: "recipe-img" %>
-        <div class='recipe-info'>
-          <h3 class='recipe-name'>
-            レシピを登録しよう！
-          </h3>
-            <div class='star-btn'>
-              <%= image_tag "star.png", class:"star-icon" %>
-              <span class='star-count'>0</span>
-            </div>
-        </div>
-      </li>
-    </ul>
+    <%= image_tag "recipe.png", class: "recipe-img" %>
   </div>
   <%# /レシピ一覧 %>
 
