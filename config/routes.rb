@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   get 'recipes/index'
   root to: "recipes#index"
   get 'recipes/new', to: 'recipes#new'
+  resources :recipes
 
 end
