@@ -1,0 +1,81 @@
+<%= render "shared/header" %>
+<div class="recipes-post-contents">
+
+  <div class="recipes-post-main">
+    <h2 class="recipes-post-title">レシピを入力しよう</h2>
+    <div class="hr-line"></div>
+
+
+    <%= form_with model: @recipe, local: true do |form| %>
+
+    <%# <%= render 'shared/error_messages', model: form.object %>
+
+    <%# レシピ名 %>
+    <div class="new-recipes">
+      <div class="weight-bold-text">
+        レシピ名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= form.text_field :title, class:"recipes-text", placeholder: "例)白だしで作るだし巻き卵" %>
+    </div>
+    <%# /レシピ名 %>
+
+    <%# 料理写真 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        料理画像
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= form.file_field :image, id:"recipe-image" %>
+      </div>
+    </div>
+    <%# /料理写真 %>
+
+    <div class="weight-bold-text">
+      ※材料と作り方 or URL どちらかは必ず記入してください
+      <span class="indispensable">必須</span>
+    </div>
+
+    <%# 材料と作り方 %>
+    <div class="new-recipes">
+      <div class="weight-bold-text">
+        材料
+      </div>
+      <%= form.text_area :ingredient, class:"recipes-text", placeholder: "例)卵３個　白だし大さじ１　サラダ油適量", rows: "10" %>
+      <div class="recipes-explain">
+        <div class="weight-bold-text">
+        作り方
+        </div>
+        <%= form.text_area :instruction, class:"recipes-text", placeholder: "例)1. ボウルに材料を混ぜる　2. 卵焼き器に油を入れ、強火　3. 3分の１ずつ入れ、手前に巻く", rows: "10" %>
+      </div>
+    </div>
+    <%# /材料と作り方 %>
+
+    <%# URLとメモ %>
+    <div class="new-recipes">
+        <div class="weight-bold-text">
+          作ったレシピのURL
+        </div>
+        <%= form.text_field :reference_url,class:"recipes-text",  placeholder: "https:// 〜〜" %>
+    </div>
+    <div class="new-recipes">
+          <div class="weight-bold-text">
+          メモ
+          </div>
+          <%= form.text_area :memo, class:"recipes-text", placeholder: "ひとことメモなど記入ができます　例)〇〇を入れると美味しかった、レシピ通りだと水っぽくなってしまったので分量を少なくする　など", rows: "5" %>
+    </div>
+    <%# /URLとメモ %>
+
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= form.submit "投稿する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  <% end %>
+  </div>
+</div>
+<%= render "shared/footer" %>
