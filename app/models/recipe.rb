@@ -3,4 +3,7 @@ class Recipe < ApplicationRecord
   has_one_attached :image
 
   validates :title, presence: true
+  validates :ingredient, presence: { message: "can't be blank" }, if: ->(recipe) { recipe.instruction.present? }
+  validates :instruction, presence: { message: "can't be blank" }, if: ->(recipe) { recipe.ingredient.present? }
+  validates :ingredient, :instruction, :reference_url, presence: { message: "can't be blank" }, if: ->(recipe) { recipe.ingredient.blank? && recipe.instruction.blank? && recipe.reference_url.blank? }
 end
