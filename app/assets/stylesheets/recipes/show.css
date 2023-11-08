@@ -1,0 +1,68 @@
+.recipe-show {
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 500px;
+}
+
+.recipe-box {
+  background-color: #FFF;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80vw;
+  min-width: 450px;
+  margin: 5vh 0;
+  padding: 2vh 2vw;
+}
+
+.recipe-show-img {
+  width: 50vh;
+  height: 50vh;
+  object-fit: cover;
+}
+
+.right-show-recipe {
+  width: calc(100% - 60vh);
+  margin: 3vh  0 3vh 3vh;
+  min-width: 300px;
+}
+
+.detail-content {
+  margin-bottom: 5vh;
+}
+
+.detail-recipe {
+  margin-bottom: 2vh;
+  font-size: large;
+  font-weight: 550;
+}
+
+.detail-value {
+  background-color: rgba(250, 238, 221, 0.652);
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.detail-URL {
+  color: gray;
+  text-align: center;
+}
+
+/* 900px以下の場合に縦並びに切り替える */
+@media (max-width: 900px) {
+.recipe-show {
+    align-items: stretch;
+  }
+  .recipe-box {
+    flex-direction: column;
+    margin: 5vh auto;
+    width: 95%; /* 横幅いっぱいに広がるように設定 */
+  }
+  .left-show-recipe,
+  .right-show-recipe {
+    width: 95%; /* 画面サイズに合わせて幅を100%に設定 */
+    flex-basis: 95%; 
+  }
+}
