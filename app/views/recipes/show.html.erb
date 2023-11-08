@@ -1,0 +1,56 @@
+<%= render "shared/header" %>
+
+<%# レシピの概要 %>
+<div class="recipe-show">
+
+
+  <div class="recipe-box">
+    <div class="left-show-recipe">
+      <h2 class="show-title">
+        <%= @recipe.title %>
+      </h2>
+      <div class="recipe-img-content">
+        <% if @recipe.image.attached? %>
+          <%= image_tag @recipe.image, class: "recipe-show-img" %> 
+        <% else %>
+          <%= image_tag "no-image.png", class: "recipe-show-img" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="right-show-recipe">
+      <div class="detail-content">
+        <h5 class="detail-recipe">材料</h5>
+        <div class="detail-value">
+          <% if @recipe.ingredient == "nil" %>
+            <%= @recipe.ingredient %>
+          <% else %>
+            <div class="detail-URL">※レシピURL先の材料をご覧ください※</div>
+          <% end %>
+        </div>
+      </div>
+      <div class="detail-content">
+        <div class="detail-recipe">作り方</div>
+        <div class="detail-value">
+          <% if @recipe.instruction == "nil" %>
+            <%= @recipe.instruction %>
+          <% else %>
+            <div class="detail-URL">※レシピURL先の作り方をご覧ください※</div>
+          <% end %>
+        </div>
+      </div>
+      <div class="detail-content">
+        <div class="detail-recipe">作ったレシピのURL</div>
+        <div class="detail-value"><%= @recipe.reference_url %></div>
+      </div>
+      <div class="detail-content">
+        <div class="detail-recipe">メモ</div>
+        <div class="detail-value"><%= @recipe.memo %></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%# /レシピの概要 %>
+
+
+<%= render "shared/footer" %>
