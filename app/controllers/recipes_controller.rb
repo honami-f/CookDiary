@@ -1,4 +1,8 @@
 class RecipesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit, :destroy]
+  before_action :set_item, only: [:edit, :show, :update, :destroy]
+
+
   def index
     @recipes = Recipe.all.order("created_at DESC")
   end
@@ -17,15 +21,12 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipe = Recipe.find(params[:id])
   end
 
   def edit
-    @recipe = Recipe.find(params[:id])
   end
 
   def update
-    @recipe = Recipe.find(params[:id])
     if @recipe.update(recipe_params)
       redirect_to recipe_path
     else
@@ -33,9 +34,22 @@ class RecipesController < ApplicationController
     end
   end
 
+  def destroy
+    if user_signed_in? && current_user.id == @recipe.user_id
+      @recipe.destroy
+      redirect_to root_path
+    else
+      redirect_to root_path
+    end
+  end
+
 
   private
   def recipe_params
     params.require(:recipe).permit(:title, :ingredient, :instruction, :reference_url, :memo, :image).merge(user_id: current_user.id)
+  end
+
+  def set_item
+    @recipe = Recipe.find(params[:id])
   end
 end
