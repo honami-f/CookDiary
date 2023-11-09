@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def show
-    @name = current_user.name
-    @recipes = current_user.recipes.order("created_at DESC")
+    @user = User.find(params[:id])
+    @name = @user.name
+    @recipes = @user.recipes.order("created_at DESC")
   end
 end

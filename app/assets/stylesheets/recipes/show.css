@@ -54,6 +54,15 @@ margin: 5vh 0;
   color: gray;
   text-align: center;
 }
+
+.post-user {
+  display: flex;
+  justify-content: end;
+}
+
+.post-user-name {
+  color: gray;
+}
 /* レシピ概要 */
 
 /* 編集削除項目 */
