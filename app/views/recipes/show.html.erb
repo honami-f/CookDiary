@@ -45,6 +45,9 @@
         <div class="detail-recipe">メモ</div>
         <div class="detail-value"><%= @recipe.memo %></div>
       </div>
+      <div class="post-user">
+        <%= link_to "投稿者：#{@recipe.user.name}", user_path(@recipe.user), class: "post-user-name" %>
+      </div>
     </div>
   </div>
 <%# /レシピの概要 %>
