@@ -43,5 +43,4 @@ https://cookdiary.onrender.com
 [![Image from Gyazo](https://i.gyazo.com/8ec9eec74b8010792196593973522935.png)](https://gyazo.com/8ec9eec74b8010792196593973522935)
 
 # 画面遷移図
-[![Image from Gyazo](https://i.gyazo.com/2ec153cff643e0869fed93d5b175df01.png)](https://gyazo.com/2ec153cff643e0869fed93d5b175df01)
-
+[![Image from Gyazo](https://i.gyazo.com/376dda4164ebce398cb60418a7169b76.png)](https://gyazo.com/376dda4164ebce398cb60418a7169b76)
