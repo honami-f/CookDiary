@@ -1,9 +1,8 @@
 <%= render "shared/header" %>
 
-<%# レシピの概要 %>
 <div class="recipe-show">
 
-
+<%# レシピの概要 %>
   <div class="recipe-box">
     <div class="left-show-recipe">
       <h2 class="show-title">
@@ -48,9 +47,22 @@
       </div>
     </div>
   </div>
-</div>
-
 <%# /レシピの概要 %>
 
+<%# 編集削除 項目 %>
+  <div class="more">
+    <ul class="recipe-show-list">
+      <% if user_signed_in? && current_user.id == @recipe.user_id %>
+        <li>
+          <%= link_to '編集', edit_recipe_path(@recipe.id), class:"edit-btn" %>
+        </li>
+        <li>
+          <%= link_to '削除', recipe_path(@recipe.id), data: { turbo_method: :delete }, class:"delete-btn" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<%# 編集削除 項目 %>
 
+</div>
 <%= render "shared/footer" %>
