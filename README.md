@@ -1,43 +1,47 @@
-# テーブル設計
+# アプリケーション名
+CookDiary
 
-## users テーブル
+# アプリケーション概要
+自身のレシピを記録したり、他人のレシピも共有できます。
+また冷蔵庫の食材を入力するとおすすめのレシピを提案してくれます。
 
-| Column             | Type   | Options                   |
-| ------------------ | ------ | ------------------------- |
-| name               | string | null: false               |
-| email              | string | null: false, unique: true |
-| encrypted_password | string | null: false               |
+# URL
+https://cookdiary.onrender.com
 
-### Association
+# テスト用アカウント
+- Basic認証ID：admin<br>
+- Basic認証アカウント：3333<br>
+#### ユーザー1️⃣
+- メールアドレス：1234@1234<br>
+- パスワード：123456<br>
+#### ユーザー2️⃣
+- メールアドレス：111@222<br>
+- パスワード：111222
 
-- has_many :recipes
-- has_many :comments
 
-## recipes テーブル
+# 利用方法
+## レシピ投稿
 
-| Column           | Type       | Options                        |
-| ---------------- | ---------- | ------------------------------ |
-| title            | string     | null: false                    |
-| ingredient       | text       |                                |
-| instruction      | text       |                                |
-| reference_url    | string     |                                |
-| memo             | text       |                                |
-| user             | references | null: false, foreign_key: true |
+##
 
-### Association
+# アプリケーションを作成した背景
+家事をする中で献立を考える負担を感じ、周囲でも同様の声が多く、嫌いな家事ランキングでも「料理」は常にトップであることが判明しました。またインターネットやレシピアプリ、SNSなどレシピの情報も多く、過去に作ったレシピを探すのにも時間を割いていると感じました。
+そのため、自身のレシピを記録し共有できるアプリを開発し、さらに冷蔵庫の中の食材から献立を提案する機能を取り入れることにしました。
 
-- belongs_to :user
-- has_many :comments
+# 洗い出した要件
+[![Image from Gyazo](https://i.gyazo.com/e36880b6a80ea41d5f32b41569a50356.png)](https://gyazo.com/e36880b6a80ea41d5f32b41569a50356)
 
-## comments テーブル
+# 実装した機能についての画像やGIFおよびその説明
 
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| text    | text       |                                |
-| user    | references | null: false, foreign_key: true |
-| recipe  | references | null: false, foreign_key: true |
 
-### Association
+# 実装予定の機能
+現在、コメント機能を実装中。その他にお気に入り機能、タグ付け機能、検索機能も実装予定。
+今後はAIのAPIを導入し、おすすめのレシピを提案する機能を実装予定。
 
-- belongs_to :user
-- belongs_to :recipe
+
+# データベース設計
+[![Image from Gyazo](https://i.gyazo.com/8ec9eec74b8010792196593973522935.png)](https://gyazo.com/8ec9eec74b8010792196593973522935)
+
+# 画面遷移図
+[![Image from Gyazo](https://i.gyazo.com/2ec153cff643e0869fed93d5b175df01.png)](https://gyazo.com/2ec153cff643e0869fed93d5b175df01)
+
