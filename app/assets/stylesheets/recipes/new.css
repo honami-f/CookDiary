@@ -82,19 +82,16 @@
   resize: none;
 }
 
-.recipes-explain {
-  margin-top: 2vh;
-}
 /* /材料ーメモまで */
 
 /* 下部ボタン */
-.sell-btn-contents {
+.recipe-btn-contents {
   width: 100%;
   text-align: center;
   margin: 6vh 0 2vh;
 }
 
-.sell-btn {
+.recipe-btn {
   background: rgb(39, 194, 39);
   border: 1px solid rgb(39, 194, 39);
   color: #fff;
