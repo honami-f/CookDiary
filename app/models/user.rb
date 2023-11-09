@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :recipes
   has_many :comments
-  
+
   validates :name, presence: true
   validates :password, format: { with: /\A[a-zA-Z0-9]{6,}\z/ }
 end
