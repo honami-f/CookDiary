@@ -21,9 +21,9 @@
         <h5 class="detail-recipe">材料</h5>
         <div class="detail-value">
           <% if @recipe.ingredient == "nil" %>
-            <%= @recipe.ingredient %>
-          <% else %>
             <div class="detail-URL">※レシピURL先の材料をご覧ください※</div>
+          <% else %>
+            <%= @recipe.ingredient %>
           <% end %>
         </div>
       </div>
@@ -31,9 +31,9 @@
         <div class="detail-recipe">作り方</div>
         <div class="detail-value">
           <% if @recipe.instruction == "nil" %>
-            <%= @recipe.instruction %>
-          <% else %>
             <div class="detail-URL">※レシピURL先の作り方をご覧ください※</div>
+          <% else %>
+            <%= @recipe.instruction %>
           <% end %>
         </div>
       </div>
