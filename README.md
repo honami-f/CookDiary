@@ -41,7 +41,7 @@ https://cookdiary.onrender.com
 
 ### マイページ
 ##### マイページはヘッダーにある「名前」を押す
-[![Image from Gyazo](https://i.gyazo.com/2d890a4f9a19d1e8c81c12a56646fe6a.gif)](https://gyazo.com/2d890a4f9a19d1e8c81c12a56646fe6a)
+[![Image from Gyazo](https://i.gyazo.com/aa58deb4ff449eab4cfd18374d1d99f9.gif)](https://gyazo.com/aa58deb4ff449eab4cfd18374d1d99f9)
 
 ### 投稿者ページ
 ##### 投稿者ページはレシピの「投稿者名」を押すとその人のマイページに遷移する
