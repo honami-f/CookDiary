@@ -40,10 +40,11 @@ https://cookdiary.onrender.com
 [![Image from Gyazo](https://i.gyazo.com/94c52c86f73a2ae8359e59cca8cd8ebf.gif)](https://gyazo.com/94c52c86f73a2ae8359e59cca8cd8ebf)
 
 ### マイページ・投稿者ページ
-マイページはヘッダーにある「名前」を押す
+##### マイページはヘッダーにある「名前」を押す
 [![Image from Gyazo](https://i.gyazo.com/2d890a4f9a19d1e8c81c12a56646fe6a.gif)](https://gyazo.com/2d890a4f9a19d1e8c81c12a56646fe6a)
 
-投稿者ページはレシピの「投稿者名」を押すとその人のマイページに遷移する
+
+##### 投稿者ページはレシピの「投稿者名」を押すとその人のマイページに遷移する
 [![Image from Gyazo](https://i.gyazo.com/25223847a95a7e6be19c495e929499b3.gif)](https://gyazo.com/25223847a95a7e6be19c495e929499b3)
 
 # 実装予定の機能
@@ -58,9 +59,9 @@ https://cookdiary.onrender.com
 [![Image from Gyazo](https://i.gyazo.com/376dda4164ebce398cb60418a7169b76.png)](https://gyazo.com/376dda4164ebce398cb60418a7169b76)
 
 # ローカルでの動作方法
-以下のコマンドを順に実行
-% git clone https://github.com/honami-f/CookDiary.git
-% cd CookDiary
+以下のコマンドを順に実行<br>
+% git clone https://github.com/honami-f/CookDiary.git<br>
+% cd CookDiary<br>
 % bundle install
 
 # 工夫したポイント
