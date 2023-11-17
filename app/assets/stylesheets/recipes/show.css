@@ -8,6 +8,38 @@
 }
 /* レシピ大枠 */
 
+/* 編集削除項目 */
+.more {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+}
+
+.recipe-show-list {
+  display: flex;
+  justify-content: end;
+  margin: 3vh 0;
+  width: 80vw;
+}
+
+.edit-btn {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #FFF;
+  background-color: orangered;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.delete-btn {
+  text-decoration: none;
+  color: #FFF;
+  background-color: gray;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+/* 編集削除項目 */
+
 /* レシピ概要 */
 .recipe-box {
   background-color: #FFF;
@@ -16,9 +48,6 @@
   justify-content: space-between;
   width: 80vw;
   min-width: 450px;
-  
-
-margin: 5vh 0;
   padding: 2vh 2vw;
 }
 
@@ -65,45 +94,53 @@ margin: 5vh 0;
 }
 /* レシピ概要 */
 
-/* 編集削除項目 */
-.recipe-show-list {
+/* コメント欄 */
+.comments-index {
   display: flex;
-  justify-content: space-around;
-  background-color: hsl(0, 0%, 96%);
-  margin-bottom: 5vh;
+  justify-content: space-evenly;
+  background-color: #f5f5f5;
+  padding: 5vh 0;
 }
 
-.edit-btn {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #FFF;
-  background-color: orangered;
-  border-radius: 10px;
-  padding: 10px 20px;
+.comment-form{
+  display: flex;
 }
 
-.delete-btn {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #FFF;
-  background-color: gray;
-  border-radius: 10px;
-  padding: 10px 20px;
+.comment-text{
+  display: block;
+  margin-top: 20px;
 }
 
+.comment-submit{
+  display: block;
+  margin-top: 20px;
+}
 
-/* 編集削除項目 */
+.comments {
+  width: 50vw;
+}
 
+.comment{
+  display: flex;
+}
 
+.comment p{
+   margin: 0;
+}
+
+.user-info{
+  color: gray;
+  font-weight: bold;
+}
+/* /コメント欄 */
 
 /* 900px以下の場合に縦並びに切り替える */
 @media (max-width: 900px) {
-.recipe-show {
-    align-items: stretch;
+  .recipe-show-list {
+    width: 95vw;
   }
   .recipe-box {
     flex-direction: column;
-    margin: 5vh auto;
     width: 95%; /* 横幅いっぱいに広がるように設定 */
   }
   .left-show-recipe,
