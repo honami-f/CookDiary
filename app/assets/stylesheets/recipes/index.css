@@ -22,7 +22,6 @@
 .service-explain {
   font-size: 4vh;
   margin: 20px auto;
-
 }
 /* //画面上部の「今日の献立」帯部分 */
 
@@ -63,9 +62,24 @@
 
 .recipe-title {
   font-size: 2.5vh;
-  
 }
-
-
 /* //レシピ一覧 */
 
+/* スマホ表示時 */
+ @media (max-width: 599px) {
+  .title-contents {
+    height: 20vh;
+    align-items: center;
+  }
+  
+  .service-title {
+    font-size: 6vw;
+    margin: 25px auto;
+  }
+  
+  .service-explain {
+    font-size: 3vw;
+    margin: 10px auto;
+  }
+
+ }

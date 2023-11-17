@@ -5,3 +5,9 @@ footer {
   background-color: rgba(252, 187, 66, 0.702);
   text-align: center;
 }
+
+@media (max-width: 599px) {
+  footer {
+    width: 100%;
+  }
+}
