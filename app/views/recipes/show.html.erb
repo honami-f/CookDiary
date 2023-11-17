@@ -1,6 +1,20 @@
 <%= render "shared/header" %>
-
 <div class="recipe-show">
+
+<%# 編集削除 項目 %>
+  <div class="more">
+    <ul class="recipe-show-list">
+      <% if user_signed_in? && current_user.id == @recipe.user_id %>
+        <li>
+          <%= link_to '編集', edit_recipe_path(@recipe.id), class:"edit-btn" %>
+        </li>
+        <li>
+          <%= link_to '削除', recipe_path(@recipe.id), data: { turbo_method: :delete }, class:"delete-btn" %>
+        </li>
+      <% end %>
+    </ul>  
+  </div>
+<%# 編集削除 項目 %>
 
 <%# レシピの概要 %>
   <div class="recipe-box">
@@ -51,21 +65,30 @@
     </div>
   </div>
 <%# /レシピの概要 %>
+</div>
 
-<%# 編集削除 項目 %>
-  <div class="more">
-    <ul class="recipe-show-list">
-      <% if user_signed_in? && current_user.id == @recipe.user_id %>
-        <li>
-          <%= link_to '編集', edit_recipe_path(@recipe.id), class:"edit-btn" %>
-        </li>
-        <li>
-          <%= link_to '削除', recipe_path(@recipe.id), data: { turbo_method: :delete }, class:"delete-btn" %>
-        </li>
+<%# コメント欄 %>
+<div class="comments-index">
+  <div class="comment-form">
+    <% if user_signed_in? %>
+      <%= form_with model: [@recipe, @comment], id: "comment-form" do |form| %>
+        <%= form.text_area :text , class: "comment-text"%>
+        <%= form.submit "コメントをする", class: "comment-submit" %>
       <% end %>
-    </ul>
+    <% end %>
   </div>
-<%# 編集削除 項目 %>
+  <div id="comments">
+    <h4>＜コメント一覧＞</h4>
+      <% @recipe.comments.each do |comment| %>
+        <div class="comment">
+          <p class="user-info"><%= comment.user.name %>： </p>
+          <p><%= comment.text%></p>
+        </div>
+      <% end %>
+  </div>
 
 </div>
+<%# /コメント欄 %>
+
+
 <%= render "shared/footer" %>
