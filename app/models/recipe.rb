@@ -2,6 +2,7 @@ class Recipe < ApplicationRecord
   belongs_to :user
   has_one_attached :image
   has_many :comments
+  has_many :likes
 
   validates :title, presence: true
   validates :ingredient, presence: { message: "can't be blank" }, if: ->(recipe) { recipe.instruction.present? }
