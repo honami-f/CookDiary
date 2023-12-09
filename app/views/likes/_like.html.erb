@@ -1,5 +1,5 @@
 <% if user_signed_in? && @recipe.liked_by?(current_user)%>
-  <%=link_to "いいね済", recipe_likes_path(@recipe.id), data: { turbo_method: :delete }, class: "recipe_likes" %>
+  <%=link_to "いいね！★", recipe_likes_path(@recipe.id), data: { turbo_method: :delete }, class: "recipe_likes" , remote: true %>
 <% else %>
-  <%=link_to "いいねする", recipe_likes_path(@recipe.id), data: { turbo_method: :post }, class: "recipe_likes" %>
+  <%=link_to "いいねする☆", recipe_likes_path(@recipe.id), data: { turbo_method: :post }, class: "recipe_likes", remote: true %>
 <% end %>

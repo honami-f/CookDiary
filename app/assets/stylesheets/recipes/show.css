@@ -101,7 +101,10 @@
   padding-top: 2vh;
 }
 /* レシピ概要 */
-
+.recipe_likes {
+  /* text-decoration: none; */
+  color: #333;
+}
 /* ボーダー線 */
 .comment-border {
   width: 80vw;
