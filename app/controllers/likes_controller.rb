@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-  before_action :set_tweet
+  before_action :set_recipe
 
   def create
     like = current_user.likes.build(recipe_id: params[:recipe_id])
@@ -17,7 +17,7 @@ class LikesController < ApplicationController
     end
   end
 
-  def set_tweet
+  def set_recipe
     @recipe = Recipe.find(params[:recipe_id])
   end
 end
