@@ -92,6 +92,13 @@
 
 .post-user-name {
   color: gray;
+  padding-left: 5vw;
+}
+
+.like_post-user {
+  display: flex;
+  justify-content: right;
+  padding-top: 2vh;
 }
 /* レシピ概要 */
 
@@ -150,7 +157,7 @@
 /* /コメント欄 */
 
 /* 900px以下の場合に縦並びに切り替える */
-@media (max-width: 900px) {
+@media (max-width: 920px) {
   .recipe-show-list,
   .comment-border,
   .comments-index {
