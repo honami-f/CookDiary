@@ -5,6 +5,7 @@
   align-items: center;
   flex-direction: column;
   min-width: 500px;
+  padding-bottom: 10vh;
 }
 /* レシピ大枠 */
 
@@ -94,12 +95,26 @@
 }
 /* レシピ概要 */
 
+/* ボーダー線 */
+.comment-border {
+  width: 80vw;
+  background-color: #ffffff;
+}
+.border {
+  border-top : dashed 2px #333;
+  width: 70vw;
+  margin: 3vh auto;
+}
+/* ボーダー線 */
+
 /* コメント欄 */
 .comments-index {
   display: flex;
   justify-content: space-evenly;
-  background-color: #f5f5f5;
-  padding: 5vh 0;
+  background-color: #ffffff;
+  padding: 5vh 0 7vh;
+  margin: 0 auto;
+  width: 80vw;
 }
 
 .comment-form{
@@ -136,7 +151,9 @@
 
 /* 900px以下の場合に縦並びに切り替える */
 @media (max-width: 900px) {
-  .recipe-show-list {
+  .recipe-show-list,
+  .comment-border,
+  .comments-index {
     width: 95vw;
   }
   .recipe-box {
