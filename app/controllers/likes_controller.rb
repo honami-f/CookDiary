@@ -4,17 +4,13 @@ class LikesController < ApplicationController
   def create
     like = current_user.likes.build(recipe_id: params[:recipe_id])
     like.save
-    respond_to do |format|
-      format.js
-    end
+    redirect_to recipe_path(:recipe_id)
   end
 
   def destroy
     like = Like.find_by(recipe_id: params[:recipe_id], user_id: current_user.id)
     like.destroy
-    respond_to do |format|
-      format.js
-    end
+    redirect_to recipe_path(:recipe_id)
   end
 
   def set_recipe
