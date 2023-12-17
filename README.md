@@ -41,19 +41,17 @@ https://cookdiary.onrender.com
 
 ### マイページ
 ##### マイページはヘッダーにある「名前」を押す
-[![Image from Gyazo](https://i.gyazo.com/aa58deb4ff449eab4cfd18374d1d99f9.gif)](https://gyazo.com/aa58deb4ff449eab4cfd18374d1d99f9)
+[![Image from Gyazo](https://i.gyazo.com/b84122286cbff58759ea3da116da44bd.gif)](https://gyazo.com/b84122286cbff58759ea3da116da44bd)
 
 ### 投稿者ページ
 ##### 投稿者ページはレシピの「投稿者名」を押すとその人のマイページに遷移する
 [![Image from Gyazo](https://i.gyazo.com/25223847a95a7e6be19c495e929499b3.gif)](https://gyazo.com/25223847a95a7e6be19c495e929499b3)
 
 # 実装予定の機能
-現在、コメント機能を実装中。その他にお気に入り機能、タグ付け機能、検索機能も実装予定。
-今後はAIを導入し、おすすめのレシピを提案する機能を実装予定。
-
+AIを導入し、おすすめのレシピを提案する機能を実装予定。
 
 # データベース設計
-[![Image from Gyazo](https://i.gyazo.com/8ec9eec74b8010792196593973522935.png)](https://gyazo.com/8ec9eec74b8010792196593973522935)
+[![Image from Gyazo](https://i.gyazo.com/62961aa20486d92a1159f68bb10c17b0.png)](https://gyazo.com/62961aa20486d92a1159f68bb10c17b0)
 
 # 画面遷移図
 [![Image from Gyazo](https://i.gyazo.com/376dda4164ebce398cb60418a7169b76.png)](https://gyazo.com/376dda4164ebce398cb60418a7169b76)
@@ -71,4 +69,3 @@ https://cookdiary.onrender.com
 # 改善点
 URLをクリックしたらページへ遷移するようにしたい。
 
-# 制作時間
