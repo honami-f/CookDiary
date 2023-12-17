@@ -4,27 +4,53 @@ app/assets/stylesheets/recipes/index.css %>
 <%= render "shared/header" %>
 
 <%# レシピ一覧 %>
-  <div class="recipe-contents">
-    <h2 class='title'><%= @name %>さんのレシピ一覧</h2>
-      <ul class='recipe-lists'>
-      <% @recipes.each do |recipe| %>
-      <li class='list'>
-        <%= link_to recipe_path(recipe.id) do %> 
-        <div class='recipe-img-content'>
-        <% if recipe.image.attached? %>
-          <%= image_tag recipe.image, class: "recipe-img" %> 
-        <% else %>
-          <%= image_tag "no-image.png", class: "recipe-img" , style: 'border: 1px solid gray;' %>
-        <% end %>
-        </div>
-        <div class='recipe-info'>
-          <h3 class='recipe-title'>
-            <%= recipe.title %>
-          </h3>
-        </div>
-        <% end %>
-      </li>
+<div class="recipe-contents">
+  <h2 class='title'><%= @name %>さんのレシピ一覧</h2>
+    <ul class='recipe-lists'>
+    <% @recipes.each do |recipe| %>
+    <li class='list'>
+      <%= link_to recipe_path(recipe.id) do %> 
+      <div class='recipe-img-content'>
+      <% if recipe.image.attached? %>
+        <%= image_tag recipe.image, class: "recipe-img" %> 
+      <% else %>
+        <%= image_tag "no-image.png", class: "recipe-img" , style: 'border: 1px solid gray;' %>
       <% end %>
-  </div>
+      </div>
+      <div class='recipe-info'>
+        <h3 class='recipe-title'>
+          <%= recipe.title %>
+        </h3>
+      </div>
+      <% end %>
+    </li>
+    <% end %>
+</div>
 <%# /レシピ一覧 %>
+
+<%# いいね一覧 %>
+<div class="recipe-contents">
+  <h2 class='title'><%= @name %>さんのいいねしたレシピ一覧</h2>
+    <ul class='recipe-lists'>
+    <% @like_recipes.each do |recipe| %>
+    <li class='list'>
+      <%= link_to recipe_path(recipe.id) do %> 
+      <div class='recipe-img-content'>
+      <% if recipe.image.attached? %>
+        <%= image_tag recipe.image, class: "recipe-img" %> 
+      <% else %>
+        <%= image_tag "no-image.png", class: "recipe-img" , style: 'border: 1px solid gray;' %>
+      <% end %>
+      </div>
+      <div class='recipe-info'>
+        <h3 class='recipe-title'>
+          <%= recipe.title %>
+        </h3>
+      </div>
+      <% end %>
+    </li>
+    <% end %>
+</div>
+<%# /いいね一覧 %>
+
 <%= render "shared/footer" %>
