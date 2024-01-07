@@ -12,28 +12,56 @@
   </div>
   <%# /画面上部の「今日の献立」帯部分 %>
 
-  <%# レシピ一覧 %>
-  <div class="recipe-contents">
-    <h2 class='title'>新着レシピ</h2>
-      <ul class='recipe-lists'>
-      <% @recipes.each do |recipe| %>
-      <li class='list'>
-        <%= link_to recipe_path(recipe.id) do %> 
-        <div class='recipe-img-content'>
-        <% if recipe.image.attached? %>
-          <%= image_tag recipe.image, class: "recipe-img" %> 
-        <% else %>
-          <%= image_tag "no-image.png", class: "recipe-img" , style: 'border: 1px solid gray;' %>
-        <% end %>
+  <%# レシピランキング %>
+  <div class="main-recipes">
+    <div class="recipe-rank">
+      <h3>⭐️レシピ人気ランキング⭐️</h3>
+      <% @foods.each do |f| %>
+        <div class="ranking">
+          第<%= f["rank"] %>位 <br>
+          <%= f["recipeTitle"] %> <br>
+          <%# 写真をクリックするとレシピの詳細が見れる %>
+          <%= link_to f["recipeUrl"] do %>
+            <%= image_tag f["foodImageUrl"], class:"ranking-img" %> <br>
+          <% end %>
         </div>
-        <div class='recipe-info'>
-          <h3 class='recipe-title'>
-            <%= recipe.title %>
-          </h3>
-        </div>
-        <% end %>
-      </li>
       <% end %>
+      <div class="annotation">※楽天レシピより</div>
+    </div>
+    <%# /レシピランキング %>
+
+
+    <%# レシピ検索機能 %>
+    <div class="main-recipes-right">
+      <div class="main-recipe-search">
+      <%=link_to '楽天レシピから検索する', rakutens_path, class:"" %>
+      </div>
+      <%# /レシピ検索機能 %>
+
+      <%# レシピ一覧 %>
+      <div class="recipe-contents">
+        <h2 class='title'>新着レシピ 🆕</h2>
+          <ul class='recipe-lists'>
+          <% @recipes.each do |recipe| %>
+          <li class='list'>
+            <%= link_to recipe_path(recipe.id) do %> 
+            <div class='recipe-img-content'>
+            <% if recipe.image.attached? %>
+              <%= image_tag recipe.image, class: "recipe-img" %> 
+            <% else %>
+              <%= image_tag "no-image.png", class: "recipe-img" , style: 'border: 1px solid gray;' %>
+            <% end %>
+            </div>
+            <div class='recipe-info'>
+              <h3 class='recipe-title'>
+                <%= recipe.title %>
+              </h3>
+            </div>
+            <% end %>
+          </li>
+          <% end %>
+      </div>
+    </div>
   </div>
   <%# /レシピ一覧 %>
 
