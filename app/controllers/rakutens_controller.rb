@@ -20,7 +20,7 @@ class RakutensController < ApplicationController
       end
     else
       # 何も検索欄に書かれていない時、人気料理を表示する
-      pop = client.get("https://app.rakuten.co.jp/services/api/Recipe/CategoryRanking/20170426?applicationId=#{ENV['RAKUTEN_APPLICATION_ID']}&categoryId=30")
+      pop = client.get("https://app.rakuten.co.jp/services/api/Recipe/CategoryRanking/20170426?applicationId=#{ENV['RAKUTEN_APPLICATION_ID']}")
       @foods = JSON.parse(pop.body)["result"]
     end
   end
