@@ -28,7 +28,8 @@
 
 .main-recipes {
   display: flex;
-  justify-content: space-evenly;  background-color:rgba(242, 234, 227, 0.963);
+  justify-content: space-evenly;
+  background-color:rgba(242, 234, 227, 0.963);
   padding: 6vh 5vw;
 }
 
@@ -39,6 +40,10 @@
   border-radius: 5px;
   padding: 2vh 2vw;
   text-align: center;
+}
+
+.ranking-title {
+  margin-bottom: 4vh;
 }
 
 .ranking {
@@ -77,6 +82,7 @@
   justify-content: space-around;
 }
 /* //検索 */
+
 
 /* レシピ一覧 */
 .recipe-contents {
