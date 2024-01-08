@@ -16,7 +16,16 @@
   <div class="main-recipes">
     <div class="recipe-rank">
       <h3>⭐️レシピ人気ランキング⭐️</h3>
-
+      <% @foods.each do |f| %>
+        <div class="ranking">
+          👑 第<%= f["rank"] %>位 👑<br>
+          <%= f["recipeTitle"] %> <br>
+          <%# 写真をクリックするとレシピの詳細が見れる %>
+          <%= link_to f["recipeUrl"] do %>
+            <%= image_tag f["foodImageUrl"], class:"ranking-img" %> <br>
+          <% end %>
+        </div>
+      <% end %>
       <div class="annotation">※楽天レシピより</div>
     </div>
     <%# /レシピランキング %>
