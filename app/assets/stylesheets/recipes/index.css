@@ -25,18 +25,73 @@
 }
 /* //画面上部の「今日の献立」帯部分 */
 
+
+.main-recipes {
+  display: flex;
+  justify-content: space-evenly;  background-color:rgba(242, 234, 227, 0.963);
+  padding: 6vh 5vw;
+}
+
+/* ランキング */
+.recipe-rank {
+  background-color: #FFF;
+  width: 20vw;
+  border-radius: 5px;
+  padding: 2vh 2vw;
+  text-align: center;
+}
+
+.ranking {
+  padding-bottom: 1vh;
+  text-align: center;
+}
+
+.ranking-img {
+  width: 12.5vw;
+  height: 12.5vw;
+  object-fit: cover;
+  margin: 1vh auto 0;
+  display: block;
+}
+.annotation {
+  color: gray;
+  font-size: small;
+  text-align: right;
+}
+/* //ランキング */
+
+
+/* 検索 */
+.main-recipe-search {
+  background-color: #FFF;
+  margin-bottom: 7vh;
+  border-radius: 5px;
+  padding: 1vh 0vw 5vh;
+}
+.search-title {
+  text-align: center;
+  margin-bottom: 5vh;
+}
+.search-contents {
+  display: flex;
+  justify-content: space-around;
+}
+/* //検索 */
+
 /* レシピ一覧 */
 .recipe-contents {
   background-color: #FFF;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1vh 0;
-  margin: 3vh 0;
+  border-radius: 5px;
+  padding: 3vh 0vw;
 }
-
+.title {
+  margin-bottom: 5vh;
+}
 .recipe-lists {
-  width: 100vw;
+  width: 63vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -47,8 +102,8 @@
 }
 
 .recipe-img {
-  width: 33vh;
-  height: 33vh;
+  width: 17vw;
+  height: 17vw;
   object-fit: cover;
 }
 
@@ -64,6 +119,7 @@
   font-size: 2.5vh;
 }
 /* //レシピ一覧 */
+
 
 /* スマホ表示時 */
  @media (max-width: 599px) {

@@ -11,4 +11,5 @@ Rails.application.routes.draw do
       get :likes
     end
   end
+  resources :rakutens, only: :index
 end

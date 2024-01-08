@@ -1,0 +1,22 @@
+<%= render "shared/header" %>
+<h1>料理レシピ検索</h1>
+
+<%= form_tag({controller:"rakutens",action:"index"}, method: :get) do %>
+  <%= text_field_tag :search %> 
+  <%= submit_tag '検索する'  %>
+<% end %>
+食材名を入力するとその食材の人気レシピTOP４が表示されます<br>
+
+<% if @hit %>
+  <% @foods.each do |f| %>
+    第<%= f["rank"] %>位 <br>
+    <%= f["recipeTitle"] %> <br>
+    <%# 写真をクリックするとレシピの詳細が見れる %>
+    <%= link_to f["recipeUrl"] do %>
+      <%= image_tag f["foodImageUrl"], size: '300x200' %> <br>
+    <% end %>
+  <% end %>
+<% else %>
+  <h1>ヒットなし</h1>
+<% end %>
+<%= render "shared/footer" %>
