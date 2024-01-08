@@ -15,7 +15,7 @@
   <%# レシピランキング %>
   <div class="main-recipes">
     <div class="recipe-rank">
-      <h3>⭐️レシピ人気ランキング⭐️</h3>
+      <h3 class="ranking-title">⭐️人気ランキング⭐️</h3>
       <% @foods.each do |f| %>
         <div class="ranking">
           👑 第<%= f["rank"] %>位 👑<br>
@@ -50,11 +50,11 @@
           <li class='list'>
             <%= link_to recipe_path(recipe.id) do %> 
             <div class='recipe-img-content'>
-            <% if recipe.image.attached? %>
-              <%= image_tag recipe.image, class: "recipe-img" %> 
-            <% else %>
-              <%= image_tag "no-image.png", class: "recipe-img" , style: 'border: 1px solid gray;' %>
-            <% end %>
+              <% if recipe.image.attached? %>
+                <%= image_tag recipe.image, class: "recipe-img" %> 
+              <% else %>
+                <%= image_tag "no-image.png", class: "recipe-img" , style: 'border: 1px solid gray;' %>
+              <% end %>
             </div>
             <div class='recipe-info'>
               <h3 class='recipe-title'>
@@ -64,6 +64,7 @@
             <% end %>
           </li>
           <% end %>
+          </ul>
       </div>
     </div>
   </div>
