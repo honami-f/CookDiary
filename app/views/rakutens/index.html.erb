@@ -1,22 +1,32 @@
 <%= render "shared/header" %>
-<h1>料理レシピ検索</h1>
 
-<%= form_tag({controller:"rakutens",action:"index"}, method: :get) do %>
-  <%= text_field_tag :search %> 
-  <%= submit_tag '検索する'  %>
-<% end %>
-食材名を入力するとその食材の人気レシピTOP４が表示されます<br>
+<div class="search-main">
+  <div class="search-rakuten">
+    <h2>食材名を入力して人気のレシピを検索 💡</h2>
 
-<% if @hit %>
-  <% @foods.each do |f| %>
-    第<%= f["rank"] %>位 <br>
-    <%= f["recipeTitle"] %> <br>
-    <%# 写真をクリックするとレシピの詳細が見れる %>
-    <%= link_to f["recipeUrl"] do %>
-      <%= image_tag f["foodImageUrl"], size: '300x200' %> <br>
+    <%= form_tag({controller:"rakutens",action:"index"}, method: :get) do %>
+      <%= text_field_tag :search %> 
+      <%= submit_tag '検索する'  %>
     <% end %>
-  <% end %>
-<% else %>
-  <h1>ヒットなし</h1>
-<% end %>
+    <div class="search-explain">食材名を入力するとその食材の人気レシピTOP４が表示されます</div><br>
+
+    <div class="recipe-search-rank">
+      <% if @hit %>
+        <% @foods.each do |f| %>
+        <div class="search-recipes">
+          🌟 第<%= f["rank"] %>位 🌟
+          <div class="recipeTitle"><%= f["recipeTitle"] %> </div><br>
+          <%# 写真をクリックするとレシピの詳細が見れる %>
+          <%= link_to f["recipeUrl"] do %>
+            <%= image_tag f["foodImageUrl"], class:"recipe-search-img" %> <br>
+          <% end %>
+        </div>
+        <% end %>
+      <% else %>
+        <h3>該当するレシピがありません</h3>
+      <% end %>
+    </div>
+  </div>
+</div>
+
 <%= render "shared/footer" %>
