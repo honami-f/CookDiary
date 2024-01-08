@@ -1,0 +1,35 @@
+.search-main {
+  background-color:rgba(242, 234, 227, 0.963);
+  padding: 8vh 5vw;
+}
+
+.search-rakuten {
+  background-color: #FFF;
+  padding: 3vh 5vw 6vh;
+  text-align: center;
+}
+
+.search-explain {
+  padding: 3vh 0;
+}
+
+.recipe-search-rank {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.search-recipes {
+  width: 15vw;
+  text-align: center;
+}
+
+.recipeTitle {
+  padding-top:  2vh;
+}
+
+.recipe-search-img {
+  width: 15vw;
+  height: 15vw;
+  object-fit: cover;
+}
