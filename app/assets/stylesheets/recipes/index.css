@@ -29,13 +29,13 @@
 .main-recipes {
   display: flex;
   justify-content: space-evenly;  background-color:rgba(242, 234, 227, 0.963);
-  padding: 6vh 0vw;
+  padding: 6vh 5vw;
 }
 
 /* ランキング */
 .recipe-rank {
   background-color: #FFF;
-  width: 25vw;
+  width: 20vw;
   border-radius: 5px;
   padding: 2vh 2vw;
   text-align: center;
@@ -63,7 +63,18 @@
 
 /* 検索 */
 .main-recipe-search {
-  
+  background-color: #FFF;
+  margin-bottom: 7vh;
+  border-radius: 5px;
+  padding: 1vh 0vw 5vh;
+}
+.search-title {
+  text-align: center;
+  margin-bottom: 5vh;
+}
+.search-contents {
+  display: flex;
+  justify-content: space-around;
 }
 /* //検索 */
 
@@ -76,9 +87,11 @@
   border-radius: 5px;
   padding: 3vh 0vw;
 }
-
+.title {
+  margin-bottom: 5vh;
+}
 .recipe-lists {
-  width: 65vw;
+  width: 63vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
