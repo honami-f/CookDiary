@@ -5,9 +5,9 @@ class RecipesController < ApplicationController
   def index
     # binding.pry
     @recipes = Recipe.all.order('created_at DESC')
-    @client = HTTPClient.new
-    @pop = @client.get("https://app.rakuten.co.jp/services/api/Recipe/CategoryRanking/20170426?applicationId=#{ENV['RAKUTEN_APPLICATION_ID']}")
-    @foods = JSON.parse(@pop.body)['result']
+    client = HTTPClient.new
+    pop = client.get("https://app.rakuten.co.jp/services/api/Recipe/CategoryRanking/20170426?applicationId=#{ENV['RAKUTEN_APPLICATION_ID']}")
+    @foods = JSON.parse(pop.body)['result']
   end
 
   def new
