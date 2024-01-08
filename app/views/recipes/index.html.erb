@@ -18,7 +18,7 @@
       <h3>⭐️レシピ人気ランキング⭐️</h3>
       <% @foods.each do |f| %>
         <div class="ranking">
-          第<%= f["rank"] %>位 <br>
+          👑 第<%= f["rank"] %>位 👑<br>
           <%= f["recipeTitle"] %> <br>
           <%# 写真をクリックするとレシピの詳細が見れる %>
           <%= link_to f["recipeUrl"] do %>
@@ -34,7 +34,11 @@
     <%# レシピ検索機能 %>
     <div class="main-recipes-right">
       <div class="main-recipe-search">
-      <%=link_to '楽天レシピから検索する', rakutens_path, class:"" %>
+        <h3 class="search-title">レシピを検索する 🔍</h3>
+        <div class="search-contents">
+          <div>投稿されたレシピを検索</div>
+          <div><%=link_to '楽天レシピで検索する', rakutens_path, class:"" %></div>
+        </div>
       </div>
       <%# /レシピ検索機能 %>
 
