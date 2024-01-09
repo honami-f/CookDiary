@@ -2,13 +2,13 @@
 
 <div class="search-main">
   <div class="search-rakuten">
-    <h2>食材名を入力して人気のレシピを検索 💡</h2>
+    <h2>人気のレシピを検索 💡</h2>
 
     <%= form_tag({controller:"rakutens",action:"index"}, method: :get) do %>
-      <%= text_field_tag :search %> 
-      <%= submit_tag '検索する'  %>
+      <%= text_field_tag :search, nil, placeholder: "食材を入力してください" %> 
+      <%= submit_tag '検索' %>
     <% end %>
-    <div class="search-explain">食材名を入力するとその食材の人気レシピTOP４が表示されます</div><br>
+    <div class="search-explain">食材の人気レシピTOP４が表示されます</div><br>
 
     <div class="recipe-search-rank">
       <% if @hit %>
