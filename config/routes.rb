@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   resources :recipes do
     resources :comments, only: :create
     resource :likes, only: [:create, :destroy]
+    collection do
+      get 'search'
+    end
   end
   resources :users, only: :show
   resources :users do
