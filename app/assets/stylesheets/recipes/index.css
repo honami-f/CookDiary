@@ -47,7 +47,7 @@
 }
 
 .ranking {
-  padding-bottom: 1vh;
+  padding-bottom: 4vh;
   text-align: center;
 }
 
@@ -55,7 +55,7 @@
   width: 12.5vw;
   height: 12.5vw;
   object-fit: cover;
-  margin: 1vh auto 0;
+  margin: 2vh auto 0;
   display: block;
 }
 .annotation {
@@ -75,12 +75,14 @@
 }
 .search-title {
   text-align: center;
-  margin-bottom: 5vh;
+  margin: 3vh;
 }
 .search-contents {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
+
 /* //検索 */
 
 
@@ -125,6 +127,18 @@
   font-size: 2.5vh;
 }
 /* //レシピ一覧 */
+
+
+/* 検索ページ */
+.search-main {
+  width: 75vw;
+  background-color: #FFF;
+  text-align: center;
+}
+.search-form {
+  margin-bottom: 7.5vh;
+}
+/* //検索ページ */
 
 
 /* スマホ表示時 */
