@@ -36,8 +36,15 @@
       <div class="main-recipe-search">
         <h3 class="search-title">レシピを検索する 🔍</h3>
         <div class="search-contents">
-          <div>投稿されたレシピを検索</div>
-          <div><%=link_to '楽天レシピで検索する', rakutens_path, class:"" %></div>
+          <div>
+          <%= form_with(url: search_recipes_path, local: true, method: :get, class: "search-form") do |form| %>
+            <%= form.text_field :keyword, placeholder: "投稿されたレシピを検索", class: "search-input" %>
+            <%= form.submit "検索", class: "search-btn" %>
+          <% end %>
+          </div>
+          <div class="">
+            <%=link_to '楽天レシピで検索する', rakutens_path, class:"" %>
+          </div>
         </div>
       </div>
       <%# /レシピ検索機能 %>
