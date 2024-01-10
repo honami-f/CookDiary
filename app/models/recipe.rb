@@ -15,4 +15,12 @@ class Recipe < ApplicationRecord
   def liked_by?(user)
     likes.where(user_id: user.id).exists?
   end
+
+  def self.search(search)
+    if search != ""
+      Recipe.where('title LIKE(?)', "%#{search}%")
+    else
+      Recipe.all
+    end
+  end
 end
