@@ -1,5 +1,5 @@
 .recipes-post-contents {
-  background-color: #f5f5f5;
+  background-color:rgba(242, 234, 227, 0.963);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -12,6 +12,7 @@
   min-width: 450px;
   margin: 15vh 0;
   padding: 10vh 15vw;
+  border-radius: 5px;
 }
 
 .recipes-post-title {
@@ -92,8 +93,8 @@
 }
 
 .recipe-btn {
-  background: rgb(39, 194, 39);
-  border: 1px solid rgb(39, 194, 39);
+  background-color: orangered;
+  border: 1px solid orangered;
   color: #fff;
   width: 50%;
   height: 50px;
