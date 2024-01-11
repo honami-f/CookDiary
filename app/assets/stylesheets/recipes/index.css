@@ -30,7 +30,7 @@
   display: flex;
   justify-content: space-evenly;
   background-color:rgba(242, 234, 227, 0.963);
-  padding: 6vh 5vw;
+  padding: 6vh 4vw;
 }
 
 /* ランキング */
@@ -38,26 +38,26 @@
   background-color: #FFF;
   width: 20vw;
   border-radius: 5px;
-  padding: 2vh 2vw;
   text-align: center;
 }
 
 .ranking-title {
-  margin: 3vh 0 4vh;
+  margin: 4vh 0 5vh;
 }
 
 .ranking {
-  padding-bottom: 2vh;
+  padding-bottom: 4vh;
+  padding: 0 2vw 4vh;
   text-align: center;
 }
 
 .ranking-rank {
-  margin-bottom: 2vh;
+  margin-bottom: 3vh;
 }
 
 .ranking-img {
-  width: 12.5vw;
-  height: 12.5vw;
+  width: 10vw;
+  height: 10vw;
   object-fit: cover;
   margin: 1vh auto 0;
   display: block;
@@ -65,7 +65,8 @@
 .annotation {
   color: gray;
   font-size: small;
-  text-align: right;
+  text-align: center;
+  margin-right: 7px;
 }
 /* //ランキング */
 
@@ -95,11 +96,9 @@
   flex-direction: column;
   align-items: center;
   border-radius: 5px;
-  padding: 3vh 0vw;
+  padding: 3vh 0 0;
 }
-.title {
-  margin-bottom: 5vh;
-}
+
 .recipe-lists {
   width: 63vw;
   display: flex;
@@ -108,12 +107,12 @@
 }
 
 .list {
-  margin: 0 1vw;
+  margin: 3vh 1vw;
 }
 
 .recipe-img {
-  width: 17vw;
-  height: 17vw;
+  width: 15vw;
+  height: 15vw;
   object-fit: cover;
 }
 
@@ -122,11 +121,10 @@
   justify-content: center;
   background-color: #FFF;
   color: black;
-  padding: 1vw;
 }
 
 .recipe-title {
-  font-size: 2.5vh;
+  font-size: 2vh;
 }
 /* //レシピ一覧 */
 
