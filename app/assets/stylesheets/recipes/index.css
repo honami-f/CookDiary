@@ -43,12 +43,16 @@
 }
 
 .ranking-title {
-  margin-bottom: 4vh;
+  margin: 3vh 0 4vh;
 }
 
 .ranking {
-  padding-bottom: 1vh;
+  padding-bottom: 2vh;
   text-align: center;
+}
+
+.ranking-rank {
+  margin-bottom: 2vh;
 }
 
 .ranking-img {
