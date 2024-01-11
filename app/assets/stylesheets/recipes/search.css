@@ -1,0 +1,31 @@
+.main-recipes2 {
+  height: calc(100vh - 140px);
+  display: flex;
+  justify-content: space-evenly;
+  background-color:rgba(242, 234, 227, 0.963);
+  padding: 8vh 5vw;
+}
+
+.search-result-recipe {
+  width: 75vw;
+  background-color: #FFF;
+  padding: 5vh 0;
+
+}
+
+.search-post-recipe {
+  width: 75vw;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.search-recipe-form{
+  text-align: center;
+  margin: 5vh 0;
+}
+
+.recipe-img-content2 {
+  text-align: center;
+}
