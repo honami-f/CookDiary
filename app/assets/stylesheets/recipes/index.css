@@ -130,6 +130,17 @@
 }
 /* //レシピ一覧 */
 
+/* マイページ編集 */
+.main-mypage {
+  background-color:rgba(242, 234, 227, 0.963);
+  padding: 5vh;
+}
+
+.mypage-recipes {
+  width: 75vw;
+  margin: 0 auto;
+}
+/* //マイページ編集 */
 
 /* スマホ表示時 */
  @media (max-width: 599px) {
