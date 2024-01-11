@@ -1,32 +1,36 @@
 <%= render "shared/header" %>
-<div class='main-recipes'>
+<div class='main-recipes2'>
 
-<div class="search-main">
-  <%= form_with(url: search_recipes_path, local: true, method: :get, class: "search-form") do |form| %>
-    <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
-    <%= form.submit "検索", class: "search-btn" %>
-  <% end %>
-  <div class="contents row">
-    <% @recipes.each do |recipe| %>
-      <li class='list'>
-        <%= link_to recipe_path(recipe.id) do %> 
-        <div class='recipe-img-content'>
-          <% if recipe.image.attached? %>
-            <%= image_tag recipe.image, class: "recipe-img" %> 
-          <% else %>
-            <%= image_tag "no-image.png", class: "recipe-img" , style: 'border: 1px solid gray;' %>
-          <% end %>
-        </div>
-        <div class='recipe-info'>
-          <h3 class='recipe-title'>
-            <%= recipe.title %>
-          </h3>
-        </div>
-        <% end %>
-      </li>
+  <div class="search-result-recipe">
+    <div class="search-recipe-form">
+    <%= form_with(url: search_recipes_path, local: true, method: :get, class: "search-form") do |form| %>
+      <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+      <%= form.submit "検索", class: "search-btn" %>
     <% end %>
+    </div>
+    <div class="search-post-recipe">
+      <ul class='recipe-lists'>
+      <% @recipes.each do |recipe| %>
+        <li class='list'>
+          <%= link_to recipe_path(recipe.id) do %> 
+          <div class='recipe-img-content2'>
+            <% if recipe.image.attached? %>
+              <%= image_tag recipe.image, class: "recipe-img" %> 
+            <% else %>
+              <%= image_tag "no-image.png", class: "recipe-img" , style: 'border: 1px solid gray;' %>
+            <% end %>
+          </div>
+          <div class='recipe-info'>
+            <h3 class='recipe-title'>
+              <%= recipe.title %>
+            </h3>
+          </div>
+          <% end %>
+        </li>
+      <% end %>
+      </ul>
+    </div>
   </div>
-</div>
 </div>
 
 <%= render "shared/footer" %>
