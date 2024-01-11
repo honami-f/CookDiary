@@ -26,7 +26,7 @@
           <% end %>
         </div>
       <% end %>
-      <div class="annotation">※楽天レシピより</div>
+      <div class="annotation">※楽天レシピより  </div>
     </div>
     <%# /レシピランキング %>
 
@@ -53,7 +53,7 @@
       <div class="recipe-contents">
         <h2 class='title'>新着レシピ 🆕</h2>
           <ul class='recipe-lists'>
-          <% @recipes.each do |recipe| %>
+          <% @recipes.reverse.first(9).each do |recipe| %>
           <li class='list'>
             <%= link_to recipe_path(recipe.id) do %> 
             <div class='recipe-img-content'>
@@ -64,9 +64,9 @@
               <% end %>
             </div>
             <div class='recipe-info'>
-              <h3 class='recipe-title'>
+              <h4 class='recipe-title'>
                 <%= recipe.title %>
-              </h3>
+              </h4>
             </div>
             <% end %>
           </li>
