@@ -53,7 +53,7 @@
       <div class="recipe-contents">
         <h2 class='title'>新着レシピ 🆕</h2>
           <ul class='recipe-lists'>
-          <% @recipes.reverse.first(9).each do |recipe| %>
+          <% @recipes.first(9).each do |recipe| %>
           <li class='list'>
             <%= link_to recipe_path(recipe.id) do %> 
             <div class='recipe-img-content'>
