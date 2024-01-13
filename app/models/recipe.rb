@@ -17,7 +17,7 @@ class Recipe < ApplicationRecord
   end
 
   def self.search(search)
-    if search != ""
+    if search != ''
       Recipe.where('title LIKE(?)', "%#{search}%")
     else
       Recipe.all
